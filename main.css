@@ -76,6 +76,35 @@ p{
     }
 }
 
+@media (max-device-width: 768px) {
+    .heading{
+        padding-top: 5%;
+        text-align: center;
+    }
+    .summary-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .image-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .subheading{
+        text-align: center;
+    }
+    .profile-image{
+        max-width: 200px;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop-tablet{
+        display: none;
+    }
+}
+
 /*Summary*/
 .summary-div{
     display: flex;
