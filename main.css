@@ -1,0 +1,79 @@
+.title{
+    font-family: 'Arizonia', cursive;
+    font-size: 3rem;
+}
+
+.title:hover{
+    color: midnightblue;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Proza Libre', sans-serif;
+}
+
+p{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.heading{
+    font-size: 2.5rem;
+}
+
+.subheading{
+    font-size: 1.5rem;
+}
+
+.home-row{
+    padding: 5% 0;
+}
+
+.mobile{
+    display: none;
+}
+.desktop-tablet{
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .heading{
+        padding-top: 5%;
+        text-align: center;
+    }
+    .summary-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .image-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .subheading{
+        text-align: center;
+    }
+    .profile-image{
+        max-width: 200px;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop-tablet{
+        display: none;
+    }
+}
+/*Summary*/
+.summary-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-div{
+    right: 0;
+}
+
+.profile-image{
+    width: 80%;
+    border-radius: 100%;
+}
