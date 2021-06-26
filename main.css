@@ -2,10 +2,6 @@ body{
     min-font-size: 22px;
 }
 
-.container-fluid{
-    padding: 0 10%;
-}
-
 .title{
     font-family: 'Arizonia', cursive;
     font-size: 3rem;
@@ -45,9 +41,6 @@ p{
 }
 
 @media (max-width: 768px) {
-    .container-fluid{
-        padding: 0;
-    }
     .heading{
         padding-top: 5%;
         text-align: center;
