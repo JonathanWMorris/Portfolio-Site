@@ -137,19 +137,19 @@
     function onSubmit(token) {
 
         window.open("https://drive.google.com/uc?export=download&id=1i8j3E1Alk4iNUEbSYdyI6ux8Ydg2SX4H");
-
-        (async () => {
-
-            const rawResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-                method: 'POST',
-                secret : "6Lc5GMQbAAAAAHGfu12Dc-O9yWvVBf2IPa8OGjMn",
-                response : `${token}`
-            });
-
-            const content = await rawResponse.json();
-
-            console.log(content);
-        })();
+        //
+        // (async () => {
+        //
+        //     const rawResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+        //         method: 'POST',
+        //         secret : "6Lc5GMQbAAAAAHGfu12Dc-O9yWvVBf2IPa8OGjMn",
+        //         response : `${token}`
+        //     });
+        //
+        //     const content = await rawResponse.json();
+        //
+        //     console.log(content);
+        // })();
     }
 </script>
 </body>
