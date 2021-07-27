@@ -122,13 +122,13 @@
                     Click the captcha button to reveal the download button to get the project files for trippy!
                 </p>
                 <button class="g-recaptcha"
-                        data-sitekey="reCAPTCHA_site_key"
+                        data-sitekey="6Lc5GMQbAAAAACX6T5tOoo52A5nharGxYwQR1R6Y"
                         data-callback='onSubmit'
                         data-action='submit'>
                     Submit
                 </button>
-                <a href="ProjectFiles/Trippy-1.3.5.zip" download>
-                    <button type="button" class="btn btn-outline-dark btn-lg download-button"> Download</button>
+                <a href="https://github.com/JonathanWMorris/Trippy.git" download>
+                    <button type="button" class="btn btn-outline-dark btn-lg download-button"> Download </button>
                 </a>
             </div>
         </div>
@@ -142,6 +142,7 @@
     function onSubmit(token) {
         document.getElementById("demo-form").submit();
         downloadButton.style.display = "block";
+        console.log(token)
     }
 </script>
 </body>
