@@ -119,24 +119,37 @@
             <div class="col-lg-8 col-md-8 summary-div">
                 <h2 class="heading">Code</h2>
                 <p class="subheading">
-                    Click the captcha button to reveal the download button to get the project files for trippy!
+                    Click the button to download the project files for trippy!
                 </p>
-                <a href="https://github.com/JonathanWMorris/Trippy.git" download>
+                <p>
                     <button data-sitekey="6Lc5GMQbAAAAACX6T5tOoo52A5nharGxYwQR1R6Y"
                             data-callback='onSubmit'
                             data-action='submit' type="button"
                             class="g-recaptcha btn btn-outline-dark btn-lg download-button">
                         Download
                     </button>
-                </a>
+                </p>
             </div>
         </div>
     </div>
 </section>
 <script>
     function onSubmit(token) {
-        document.getElementById("demo-form").submit();
-        console.log(token);
+
+        window.open("https://drive.google.com/uc?export=download&id=1i8j3E1Alk4iNUEbSYdyI6ux8Ydg2SX4H");
+
+        (async () => {
+
+            const rawResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+                method: 'POST',
+                secret : "6Lc5GMQbAAAAAHGfu12Dc-O9yWvVBf2IPa8OGjMn",
+                response : `${token}`
+            });
+
+            const content = await rawResponse.json();
+
+            console.log(content);
+        })();
     }
 </script>
 </body>
