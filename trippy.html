@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trippy - Travel App</title>
+
+    <!--    Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <!--    reCaptcha-->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <!--    Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Cormorant+Garamond&family=Proza+Libre&display=swap"
+          rel="stylesheet">
+
+    <!--    Font Awesome-->
+    <script src="https://kit.fontawesome.com/747db76838.js" crossorigin="anonymous"></script>
+
+    <!--    Custom CSS-->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<section id="navbar" class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light">
+        <div class="container">
+            <h1 class="text-center navbar-brand title">Jonathan Morris</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="trippy.html">Trippy</a>
+                    </li>
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <a class="nav-link" href="#">Instant Trivia</a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="Quick Edit">-->
+                    <!--                        <a class="nav-link" href="#">Quick Edit</a>-->
+                    <!--                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section id="summary">
+    <!--    On all devices-->
+    <div class="container">
+        <div class="row padded-row">
+            <div class="col-lg-4 col-md-4 image-div">
+                <img class="profile-image shadow-lg" src="Images/trippy/trippy_icon.png" alt="portrait">
+            </div>
+            <div class="col-lg-8 col-md-8 summary-div">
+                <h2 class="heading">Trippy - Travel Planning</h2>
+                <p class="subheading">
+                    This was my first project and it help make travel planning easier by giving them a place to plan
+                    their
+                    trip and keep track of additional notes that they have relating to each location.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tech-stack">
+
+    <!-- On desktop/tablets -->
+    <div class="desktop-tablet container">
+        <div class="row padded-row">
+            <div class="col-lg-8 col-md-8 summary-div">
+                <h2 class="heading">Tech Stack</h2>
+                <p class="subheading">
+                    The program was built using RealmSwift Database, UIKit, SwiftUI, and the Yelp API. The programming
+                    language
+                    used was Swift.
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 image-div">
+                <img class="profile-image shadow-lg" src="Images/home/swift.png" alt="swift programming icon">
+            </div>
+        </div>
+    </div>
+
+    <!-- On mobile -->
+    <div class="mobile container">
+        <div class="row padded-row">
+            <div class="col-lg-4 col-md-4 image-div">
+                <img class="profile-image shadow-lg" src="Images/home/swift.png" alt="swift programming icon">
+            </div>
+            <div class="col-lg-8 col-md-8 summary-div">
+                <h2 class="heading">Tech Stack</h2>
+                <p class="subheading">
+                    The program was built using RealmSwift Database, UIKit, and the Yelp API.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="code">
+    <!-- On all devices -->
+    <div class="container">
+        <div class="row padded-row">
+            <div class="col-lg-4 col-md-4 image-div">
+                <img class="profile-image shadow-lg" src="Images/home/xcode.png" alt="swift programming icon">
+            </div>
+            <div class="col-lg-8 col-md-8 summary-div">
+                <h2 class="heading">Code</h2>
+                <p class="subheading">
+                    Click the captcha button to reveal the download button to get the project files for trippy!
+                </p>
+                <button class="g-recaptcha"
+                        data-sitekey="reCAPTCHA_site_key"
+                        data-callback='onSubmit'
+                        data-action='submit'>
+                    Submit
+                </button>
+                <a href="ProjectFiles/Trippy-1.3.5.zip" download>
+                    <button type="button" class="btn btn-outline-dark btn-lg download-button"> Download</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    let downloadButtonQuery = document.getElementsByClassName("download-button");
+    let downloadButton = downloadButtonQuery[0]
+    downloadButton.style.display = "none";
+
+    function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+        downloadButton.style.display = "block";
+    }
+</script>
+</body>
+</html>
